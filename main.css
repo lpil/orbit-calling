@@ -1,0 +1,64 @@
+@keyframes spin {
+  100% { transform:rotate(360deg); }
+}
+
+@keyframes left-right {
+  from {
+    left: 15%;
+  }
+
+  to {
+    left: 85%;
+  }
+}
+
+@keyframes round {
+  from {
+    left: 15%;
+  }
+
+  to {
+    left: 85%;
+  }
+}
+
+html {
+  overflow: hidden;
+  background-color: black;
+  height: 100%;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  animation: spin 120s linear infinite;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.left, .right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  animation: left-right 15s ease-in-out infinite;
+  animation-direction: alternate;
+}
+
+.right {
+  animation-direction: alternate-reverse;
+}
+
+.circle {
+  display: inline-block;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.circle .circle {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
