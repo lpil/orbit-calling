@@ -12,16 +12,6 @@
   }
 }
 
-@keyframes round {
-  from {
-    left: 15%;
-  }
-
-  to {
-    left: 85%;
-  }
-}
-
 html {
   overflow: hidden;
   background-color: black;
